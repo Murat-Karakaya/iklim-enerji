@@ -58,8 +58,8 @@ export default ()=>{
             
             <div className="linkLineup"
                 style={{width:"100%", justifyContent:"center", columnGap:"10%"}}>
-                <a target="_blank" href="https://github.com/Murat-Karakaya/iklim-enerji"><img loading="lazy" style={{"--order":"0"}} className="reveal logo" alt="Github logo" src="/favicon.png"/></a>
-                <a target="_blank" href="https://github.com/Murat-Karakaya"><img loading="lazy" style={{"--order":"1"}} className="reveal logo" alt="LinkedIn logo" src="/logos/logo.png"/></a>
+                <a target="_blank" href="https://github.com/Murat-Karakaya/iklim-enerji"><img loading="lazy" style={{"--order":"0"}} className="reveal logo" alt="Website Logo" src="/favicon.svg"/></a>
+                <a target="_blank" href="https://github.com/Murat-Karakaya"><img loading="lazy" style={{"--order":"1"}} className="reveal logo" alt="Developers Logo" src="/murat-logo.png"/></a>
             </div>
         </section>
 
