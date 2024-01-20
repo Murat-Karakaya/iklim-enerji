@@ -1,0 +1,62 @@
+/*section 1*/
+
+.lineup, .linkLineup{
+	display: flex;
+	align-items: center;
+}
+@media screen and (max-width: 700px)
+{.lineup{flex-direction: column;}}
+
+/*section 2*/
+
+.logo{
+	height: 20vw;
+	max-height: 6em;
+	width: auto;
+}
+
+.linkLineup>a{
+	transform: scale(1);
+	transition: transform .3s;
+}
+.linkLineup>a::before{background-color: var(--page-line);}
+.linkLineup>a:hover{transform: scale(1.2);}
+
+.logo.reveal {
+	opacity: 0;
+	transform: translateX(-5em);
+	transition: all .5s calc(80ms*var(--order));
+}
+.logo.show {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+/*section 3*/
+
+section:nth-child(2) {
+	background-color: transparent;
+	position: relative;
+	transform-style: preserve-3d;
+	z-index:-1;
+}
+
+.parallaxPhotos {
+	display: block;
+	position: absolute;
+	padding: .25em;
+	border-radius: .5em;
+	border: 2px solid var(--custom-blue-line);
+	transition: transform .5s;
+	height: 15vw;
+	max-height: 7em;
+	width: auto;
+	border-radius: .125em;
+	transition: transform .3s;
+}
+
+#paralax-text-container {
+	border: 2px solid var(--custom-blue-line);
+	border-radius: .7em;
+	cursor: pointer;
+}

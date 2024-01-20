@@ -1,4 +1,4 @@
-import "../pageContents/pageStyles.css";
+import "../../pageContents/pageStyles.css";
 import { useEffect } from "react";
 import { useAtom } from "jotai";
 import { pageAtom } from "../../jotai/atoms";

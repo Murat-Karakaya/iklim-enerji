@@ -10,28 +10,44 @@ body,html{
 	flex-direction: column;
 	height: 100vh;
 	--nav-backround: linear-gradient(to right,#032dfc, #a803fc);
-	--page-line:rgb(10, 5, 0) ;
 	--nav-button-color: linear-gradient(to right,#00ffc4, #03cefc);
-	--custom-blue: #195aff;
 }
 :focus-visible{
 	outline: -webkit-focus-ring-color auto 1px;
 	outline: -moz-mac-focusring auto 1px;
 	outline: -ms-focusring auto 1px;
 }
+
+*{
+	color: var(--page-line);
+	font-family: 'Montserrat', sans-serif;
+	box-sizing: border-box;
+	font-size: 18px;
+	transition: color .2s, background-color .2s;
+}
+*:not(h1, h2, h3, p, a, img, label) {
+	background-color: var(--default-block-background-color);
+}
+
+fieldset, legend {
+	border: 3px solid var(--custom-blue-line);
+	border-radius: 5px;	
+}
+
 button{
 	all: unset;
 	cursor: pointer;
 }
+
 a{
 	text-decoration: none;
 	position: relative;
-	color: var(--custom-blue);
+	color: var(--custom-blue-line);
 }
 a::before{
 	position: absolute;
 	content: "";
-	background-color: var(--custom-blue);
+	background-color: var(--custom-blue-line);
 	height: 3px;
 	width: 0;
 	bottom: 0;

@@ -5,23 +5,18 @@
 }
 
 /*Page Basic Styles*/
-
-fieldset, legend {
-	border: 3px solid var(--custom-blue);
-	border-radius: 5px;	
-}
-
 .contents {
-	width: 100%;
+	width: clamp(100px, 100%, 800px);
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 }
 
 .startButton{
+	margin: .5em;
 	width: clamp(190px, 30vw, 250px);
 	text-align: center;
-	background-color: var(--custom-blue);
+	background-color: #0015ff;
 	border-bottom: .125em solid #000a7d;
 	border-radius: .5rem;
 	padding: .25em;
@@ -29,7 +24,7 @@ fieldset, legend {
 	font-family: 'Montserrat', sans-serif;
 }
 .startButton:active{
-	margin-top: .125em;
+	margin-top: .625em;
 	border-bottom: 0px solid transparent;
 }
 
@@ -61,7 +56,7 @@ p {
 
 section {
 	display: grid;
-	height: 100%;
+	height: clamp(430px, 100%, 700px);
 	align-content: center;
 	row-gap: 2rem;
 	place-items: center;

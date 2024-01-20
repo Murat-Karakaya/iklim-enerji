@@ -14,24 +14,29 @@
 }
 #place::before{transform: scaleX(1);}
 
-.link, #end{
-	padding: 15px 10px 15px 10px;
+.link, #nav-end {
+	margin: 0 2px;
+}
+
+.link, #nav-end, #ham-end{
+	user-select: none;
+	padding: 0 10px 0 10px;
+	height: calc(1em + 35px);
 	font-family: 'Nunito', sans-serif;
 	font-weight: 500;
 	color: black;
 	font-size: 20px;
 	background-image: var(--nav-button-color);
 	position: relative;
-	margin: 0 2px;
 	border-radius: 10px 10px 0 0;
 }
 
 @media screen and (max-width: 690px) {
-	.link, #end{
+	.link {
 		margin: 0;
 		border-radius: 0;
 	}
-	#end{margin-top: 8px;}
+	
     .link::before{
 		width: 0;
 		transform: none;
