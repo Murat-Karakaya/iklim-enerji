@@ -1,0 +1,78 @@
+*{
+	box-sizing: border-box;
+	font-size: 18px;
+}
+body,html{
+	margin: 0;
+}
+#root{
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	--nav-backround: linear-gradient(to right,#032dfc, #a803fc);
+	--page-line:rgb(10, 5, 0) ;
+	--nav-button-color: linear-gradient(to right,#00ffc4, #03cefc);
+	--custom-blue: #195aff;
+}
+:focus-visible{
+	outline: -webkit-focus-ring-color auto 1px;
+	outline: -moz-mac-focusring auto 1px;
+	outline: -ms-focusring auto 1px;
+}
+button{
+	all: unset;
+	cursor: pointer;
+}
+a{
+	text-decoration: none;
+	position: relative;
+	color: var(--custom-blue);
+}
+a::before{
+	position: absolute;
+	content: "";
+	background-color: var(--custom-blue);
+	height: 3px;
+	width: 0;
+	bottom: 0;
+	left: 0;
+	transition: all 0.3s;
+}
+a:hover:before{
+	width: 100%;
+	transform: scaleX(.5);
+}
+
+figure{
+    margin: .5em;
+}
+
+.button-x{
+	border-radius: .5em;
+	display: flex;
+	position: absolute;
+	width: 2em;
+	height: 2em;
+	top: 0;
+	right: 0;
+	z-index: 1;
+	justify-content: center;
+	align-items: center;
+}
+.button-x::before{
+	content: "";
+	background-color: black;
+	height: 3px;
+	width: 25px;
+	border-radius: 2px;
+	transform: rotate(-45deg);
+}
+.button-x::after{
+	content: "";
+	position: absolute;
+	background-color: black;
+	height: 3px;
+	width: 25px;
+	border-radius: 2px;
+	transform: rotate(45deg);
+}

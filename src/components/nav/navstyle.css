@@ -1,0 +1,58 @@
+nav {
+	padding: 0 10px;
+	background-image: var(--nav-backround);
+}
+
+#nav-x {
+	display: none;
+}
+
+#end {
+	float: right;
+}
+
+.link, #end {
+	user-select: none;
+}
+
+@media screen and (max-width: 690px){
+	/*NAVBUTTON*/
+	#end {
+        margin-top: 5px;
+        float: none;
+    }
+
+	.link, #end {
+		box-sizing: border-box;
+		margin-left: 0;
+		width: 100%;
+		border-radius: 0;
+		position: relative;
+	}
+
+	/*NAV TOGGLE ANIMATION*/
+	nav {
+		position: fixed;
+		left: -200px;
+		top: 0;
+		bottom: 0;
+		width: 200px;
+		padding: 0;
+		z-index: 1;
+		transition: left 0.2s ease;
+	}
+
+	.navVis {
+		left:0;
+	}
+
+	#nav-x {
+		display: flex;
+	}
+}
+
+@media screen and (min-width: 690px){
+	nav {
+		display: block !important;
+	}
+}
