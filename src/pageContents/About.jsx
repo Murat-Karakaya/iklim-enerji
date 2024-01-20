@@ -31,8 +31,8 @@ export default ()=>{
             </div>
             <fieldset className="contents">
                 <legend>İçindekiler</legend>
-                <button onClick={startGithub} className="startButton">Github</button>
                 <button onClick={startIklimselFarkindalik} className="startButton">İklimsel Farkındalık</button>
+                <button onClick={startGithub} className="startButton">Github</button>
             </fieldset>
         </section>
         
