@@ -1,6 +1,9 @@
-nav {
+#main-nav {
 	padding: 0 10px;
-	background-image: var(--nav-backround);
+}
+
+#main-nav {
+	background-color: var(--nav-backround);
 }
 
 #nav-x {
@@ -17,19 +20,20 @@ nav {
 	display: none;
 }
 
-#hambutton{
+#hambutton {
 	display: none;
-	background-image: var(--nav-backround);
+	background-color: var(--nav-backround);
 	padding: 0;
 }
 
-@media screen and (max-width: 690px){
-	#hambutton{
+@media screen and (max-width: 690px) {
+	#hambutton {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 	}
-    #menu{
+
+    #menu {
 		display: flex;
 		margin-left: 40px;
 		padding: 4px;
@@ -37,20 +41,22 @@ nav {
 		flex-direction: column;
 		justify-content: space-between;
 	}
-	#line{
+
+	#line {
 		background-color: black;
 		height: 3px;
 		width: 25px;
 		border-radius: 2px;
 	}
-	#menu::before{
+	#menu::before {
 		content: "";
 		background-color: black;
 		height: 3px;
 		width: 25px;
 		border-radius: 2px;
 	}
-	#menu::after{
+
+	#menu::after {
 		content: "";
 		background-color: black;
 		height: 3px;
@@ -78,9 +84,9 @@ nav {
 	}
 
 	/*NAV TOGGLE ANIMATION*/
-	nav {
+	#main-nav {
 		position: fixed;
-		left: -200px;
+		/* left property is being set in the nav.jsx file */
 		top: 0;
 		bottom: 0;
 		width: 200px;
@@ -89,17 +95,13 @@ nav {
 		transition: left 0.2s ease;
 	}
 
-	.navVis {
-		left:0;
-	}
-
 	#nav-x {
 		display: flex;
 	}
 }
 
-@media screen and (min-width: 690px){
-	nav {
-		display: block !important;
+@media screen and (min-width: 690px) {
+	#main-nav {
+		display: block;
 	}
 }

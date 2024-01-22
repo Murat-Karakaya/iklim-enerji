@@ -1,11 +1,12 @@
 import "./navstyle.css";
 import Navbutton from "../navbutton/navbutton";
 import Hambutton from "../hambutton/hambutton";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useAtom } from "jotai";
 import { darkModeAtom } from "../../jotai/atoms";
 
 const Nav=()=> {
+    const navElement = useRef(null)
     const [isDarkMode, setIsDarkMode] = useAtom(darkModeAtom)
     const [ smallNavVis, setSmallNavVis ] = useState(false)
 
@@ -13,12 +14,12 @@ const Nav=()=> {
         if(window.innerWidth >= 800 || smallNavVis) return
 
         setTimeout(()=>{
-            document.querySelector("nav").style.display="none"
+            navElement.current.style.display="none"
         },200)
     }, [smallNavVis])
 
     const hamClicked = ()=> {
-        document.querySelector("nav").style.display = "block"
+        navElement.current.style.display = "block"
         setTimeout(()=> setSmallNavVis(true), 0)
     }
 
@@ -28,7 +29,7 @@ const Nav=()=> {
     return(
         <>
             <Hambutton clickHandler={hamClicked}/>
-            <nav className={smallNavVis ? "navVis" : ""}>
+            <nav ref={navElement} id="main-nav" style={{left: smallNavVis ? 0 : -200}}>
                 <button
                  aria-label="close-Navigation"
                  onClick={hideNav} 

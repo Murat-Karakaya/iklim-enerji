@@ -24,9 +24,9 @@
 	height: calc(1em + 35px);
 	font-family: 'Nunito', sans-serif;
 	font-weight: 500;
-	color: black;
+	color: var(--page-line);
 	font-size: 20px;
-	background-image: var(--nav-button-color);
+	background-color: var(--nav-button-color);
 	position: relative;
 	border-radius: 10px 10px 0 0;
 }

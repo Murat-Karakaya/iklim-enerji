@@ -9,8 +9,7 @@ body,html{
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
-	--nav-backround: linear-gradient(to right,#032dfc, #a803fc);
-	--nav-button-color: linear-gradient(to right,#00ffc4, #03cefc);
+	--nav-backround: rgb(72, 0, 255);
 }
 :focus-visible{
 	outline: 3px solid var(--page-line);
