@@ -12,15 +12,31 @@
 .logo{
 	height: 20vw;
 	max-height: 6em;
-	width: auto;
+	aspect-ratio: 1;
+	position: relative;
 }
 
-.linkLineup>a{
-	transform: scale(1);
-	transition: transform .3s;
+.logo-a{
+	text-decoration: none;
+	position: relative;
+	transition: all .3s;
 }
-.linkLineup>a::before{background-color: var(--page-line);}
-.linkLineup>a:hover{transform: scale(1.2);}
+.logo-a:hover{
+	transform: scale(1.2);
+}
+.logo-a::before{
+	position: absolute;
+	border-radius: 50%;
+	content: "";
+	background-color: var(--page-line);
+	height: 0;
+	width: 0;
+	transition: all 0.3s;
+}
+.logo-a:hover:before{
+	transform: scaleX(1);
+	animation: bounce .3s linear;
+}
 
 .logo.reveal {
 	opacity: 0;
@@ -59,4 +75,31 @@ section:nth-child(2) {
 	border: 2px solid var(--custom-blue-line);
 	border-radius: .7em;
 	cursor: pointer;
+}
+
+@keyframes bounce {
+	0% {
+		width: 0;
+		height: 0;
+		right: 0;
+		left: 100%;
+		bottom: 100%;
+		top: 0;		
+	}
+	50% {
+		width: 100%;
+		height: 100%;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		top: 0;	
+	}
+	100% {
+		width: 0;
+		height: 0;
+		right: 100%;
+		left: 0;
+		bottom: 0;
+		top: 100%;	
+	}
 }

@@ -13,9 +13,7 @@ body,html{
 	--nav-button-color: linear-gradient(to right,#00ffc4, #03cefc);
 }
 :focus-visible{
-	outline: -webkit-focus-ring-color auto 1px;
-	outline: -moz-mac-focusring auto 1px;
-	outline: -ms-focusring auto 1px;
+	outline: 3px solid var(--page-line);
 }
 
 *{
@@ -39,6 +37,10 @@ button{
 	cursor: pointer;
 }
 
+img {
+	display: block;
+}
+
 a{
 	text-decoration: none;
 	position: relative;
@@ -58,6 +60,20 @@ a:hover:before{
 	width: 100%;
 	transform: scaleX(.5);
 }
+
+/* .unstyled-a {
+	text-decoration: none;
+}
+.unstyled-a::before{
+	position: relative;
+	content: "";
+	background-color: transparent;
+	height: 0;
+}
+.unstyled-a:hover:before{
+	width: 0;
+	transform: none;
+} */
 
 figure{
     margin: .5em;

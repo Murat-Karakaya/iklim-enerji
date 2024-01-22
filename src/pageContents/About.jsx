@@ -25,7 +25,7 @@ export default ()=>{
     }
     return(<>
         <section>
-            <h1>Hoş Geldiniz!</h1>
+            <h1 className="repeating-moving-bg gradient-text">Hoş Geldiniz!</h1>
             <div className="lineup">
                 <p>Bu internet sayfasında ben size iklimsel değişikliğin enerji ile ilişkisinden bahsetmeyi amaçladım. Birbirleriyle iç içe girmiş bir makarna oluşturmaktan kaçınmak için ise her enerji kaynağı için ayrı bir sayfa oluşturmaya karar verdim. Navigasyon çubuğundan hangi sayfaya gitmek istediğinize karar verebilirsiniz.</p>
             </div>
@@ -56,10 +56,36 @@ export default ()=>{
         <section ref={githubSection}>
             <p>Bu internet sitesine katkıda bulunmak istiyorsanız bu sitenin kodları Github'da <a target="_blank" href="https://github.com/Murat-Karakaya/iklim-enerji">iklim-enerji</a> deposunda bulabilirsiniz. Eğer diğer projelerimi de merak ediyorsanız onları da <a href="https://github.com/Murat-Karakaya">Github'dan</a> bulabilirsiniz. 😉</p>
             
-            <div className="linkLineup"
-                style={{width:"100%", justifyContent:"center", columnGap:"10%"}}>
-                <a target="_blank" href="https://github.com/Murat-Karakaya/iklim-enerji"><img loading="lazy" style={{"--order":"0"}} className="reveal logo" alt="Website Logo" src="/favicon.svg"/></a>
-                <a target="_blank" href="https://github.com/Murat-Karakaya"><img loading="lazy" style={{"--order":"1"}} className="reveal logo" alt="Developers Logo" src="/murat-logo.png"/></a>
+            <div
+             className="linkLineup"
+             style={{width:"100%", justifyContent:"center", columnGap:"10%"}}
+            >
+                <a
+                 className="logo-a" 
+                 target="_blank" 
+                 href="https://github.com/Murat-Karakaya/iklim-enerji"
+                >
+                    <img
+                     loading="lazy" 
+                     style={{"--order":"0"}} 
+                     className="reveal logo" 
+                     alt="Website Logo" 
+                     src="/favicon.svg"
+                    />
+                </a>
+                <a
+                 className="logo-a" 
+                 target="_blank" 
+                 href="https://github.com/Murat-Karakaya"
+                >
+                    <img
+                     loading="lazy" 
+                     style={{"--order":"1"}} 
+                     className="reveal logo" 
+                     alt="Developers Logo" 
+                     src="/murat-logo.png"
+                    />
+                </a>
             </div>
         </section>
 

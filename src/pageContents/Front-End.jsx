@@ -1,5 +1,5 @@
 export default ()=>{
     return(<>
-        <h1>Rüzgar Enerjisi</h1>
+        <h1 className="repeating-moving-bg gradient-text">Rüzgar Enerjisi</h1>
     </>)
 }

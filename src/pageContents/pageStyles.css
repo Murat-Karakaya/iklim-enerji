@@ -36,11 +36,20 @@
 	perspective: 20px;
 }
 
-h1 {
-	background: var(--nav-backround);
+.gradient-text {
+	background-image: linear-gradient(to right,#032dfc, #a803fc, #032dfc);	
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+}
+
+.repeating-moving-bg {
+	background-size: 400px 100%;
+	background-repeat: repeat-x;
+	animation: move-bg-to-left 6s linear infinite;
+}
+
+h1 {
 	font-family: 'Nunito', sans-serif;
 	font-size: 3.5rem;
 	margin: .5rem 0 0 0;
@@ -66,5 +75,14 @@ section {
 @media screen and (max-width: 700px) {
 	section {
 		row-gap: 1rem;
+	}
+}
+
+@keyframes move-bg-to-left {
+	0% { 
+		background-position: 0 0; 
+	}
+	100% { 
+		background-position: -400px 0; 
 	}
 }
