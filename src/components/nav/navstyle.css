@@ -96,6 +96,7 @@
 	}
 
 	#nav-x {
+		background-color: var(--page-line);
 		display: flex;
 	}
 }

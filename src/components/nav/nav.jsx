@@ -11,21 +11,21 @@ const Nav=()=> {
     const [ smallNavVis, setSmallNavVis ] = useState(false)
 
     useEffect(()=>{
-        if(window.innerWidth >= 800 || smallNavVis) return
+        if(window.innerWidth >= 690 || smallNavVis) return
 
-        setTimeout(()=>{
-            navElement.current.style.display="none"
-        },200)
+        setTimeout(() => {
+            navElement.current.style.display = "none"
+        }, 200)
     }, [smallNavVis])
 
-    const hamClicked = ()=> {
+    const hamClicked = () => {
         navElement.current.style.display = "block"
         setTimeout(()=> setSmallNavVis(true), 0)
     }
 
     const hideNav = () => setSmallNavVis(false)
     
-    const buttonValues = ["Anasayfa", "Rüzgar Enerjisi", "Hidrolik Enerji", "Nükleer Enerji"/* , "Fosil Yakıt" */]
+    const buttonValues = [ "Anasayfa", "Rüzgar Enerjisi", "Hidrolik Enerji", "Nükleer Enerji"/* , "Fosil Yakıt" */]
     return(
         <>
             <Hambutton clickHandler={hamClicked}/>

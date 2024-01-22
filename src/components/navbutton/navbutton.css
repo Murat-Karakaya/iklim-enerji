@@ -26,9 +26,10 @@
 	font-weight: 500;
 	color: var(--page-line);
 	font-size: 20px;
-	background-color: var(--nav-button-color);
+	background-color: var(--default-block-background-color);
 	position: relative;
 	border-radius: 10px 10px 0 0;
+	transition: color .2s, background-color .2s;
 }
 
 @media screen and (max-width: 690px) {
