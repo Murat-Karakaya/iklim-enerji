@@ -77,8 +77,7 @@
 
 	.link {
 		box-sizing: border-box;
-		margin-left: 0;
-		width: 100%;
+		width: calc(100% - 4px);
 		border-radius: 0;
 		position: relative;
 	}
@@ -96,13 +95,14 @@
 	}
 
 	#nav-x {
-		background-color: var(--page-line);
+		background-color: white;
+		margin-right: 4px;
 		display: flex;
 	}
 }
 
 @media screen and (min-width: 690px) {
 	#main-nav {
-		display: block;
+		display: block !important;
 	}
 }
