@@ -5,6 +5,11 @@
 }
 
 /*Page Basic Styles*/
+
+.text-align-left {
+	text-align: left;
+}
+
 .contents {
 	width: clamp(100px, 100%, 800px);
 	display: flex;
@@ -36,6 +41,11 @@
 	perspective: 20px;
 }
 
+.place-center {
+	display: grid;
+	place-items: center;
+}
+
 .gradient-text {
 	background-image: linear-gradient(to right,#032dfc, #a803fc, #032dfc);	
 	background-clip: text;
@@ -44,32 +54,68 @@
 }
 
 .repeating-moving-bg {
-	background-size: 400px 100%;
+	background-size: 5em 100%;
 	background-repeat: repeat-x;
 	animation: move-bg-to-left 6s linear infinite;
 }
 
-h1 {
-	font-family: 'Nunito', sans-serif;
-	font-size: 3.5rem;
-	margin: .5rem 0 0 0;
-	font-weight: 500;
-	text-align: center;
-	font-family: 'Nunito', sans-serif;
+.cutoff-article {
+	max-height: 7em;
+	overflow: hidden;
+	position: relative;
+	transition: color .2s, background-color .2s, height .2s;
+}
+.cutoff-article:has(+ div > .expand-btn:checked) {
+	max-height: none;
 }
 
-p {
+.expand-btn {
+	appearance: none;
 	text-align: center;
-	font-family: 'Montserrat', sans-serif;
+	padding: .5em;
+	width: 6em;
+	cursor: pointer;
+	background-color: var(--page-line);
+	color: var(--default-block-background-color);
 }
 
-section {
-	display: grid;
-	height: clamp(430px, 100%, 700px);
-	align-content: center;
-	row-gap: 2rem;
-	place-items: center;
-	padding:0 2em;
+.expand-btn-container {
+	margin-top: 1em;
+	position: relative;
+	width: fit-content;
+}
+.expand-btn-container::before {
+	position: absolute;
+	content: "";
+	top: 0;
+	right: 0;
+	width: 0;
+	height: 3px;
+	background-color: var(--custom-blue-line);
+	transition: all .2s;
+}
+.expand-btn-container::after {
+	position: absolute;
+	content: "";
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 3px;
+	background-color: var(--custom-blue-line);
+	transition: all .2s;
+}
+.expand-btn-container:hover::before {
+	width: 100%;
+}
+.expand-btn-container:hover::after {
+	width: 100%;
+}
+
+.expand-btn::before {
+	content: "Genişlet";
+}
+.expand-btn:checked::before {
+	content: "Daralt";
 }
 
 @media screen and (max-width: 700px) {
@@ -83,6 +129,6 @@ section {
 		background-position: 0 0; 
 	}
 	100% { 
-		background-position: -400px 0; 
+		background-position: -5em 0; 
 	}
 }

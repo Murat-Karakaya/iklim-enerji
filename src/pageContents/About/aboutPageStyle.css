@@ -1,11 +1,9 @@
 /*section 1*/
 
-.lineup, .linkLineup{
+.linkLineup{
 	display: flex;
 	align-items: center;
 }
-@media screen and (max-width: 700px)
-{.lineup{flex-direction: column;}}
 
 /*section 2*/
 
@@ -50,7 +48,7 @@
 
 /*section 3*/
 
-section:nth-child(2) {
+#parallax-section {
 	background-color: transparent;
 	position: relative;
 	transform-style: preserve-3d;

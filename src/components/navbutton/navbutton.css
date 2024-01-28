@@ -32,7 +32,7 @@
 	transition: color .2s, background-color .2s;
 }
 
-@media screen and (max-width: 690px) {
+@media screen and (max-width: 770px) {
 	.link {
 		margin-left: 0;
 		border-radius: 0;

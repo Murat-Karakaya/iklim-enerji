@@ -5,10 +5,11 @@ import { useEffect } from "react";
 import { useAtomValue } from "jotai";
 import { darkModeAtom } from "./jotai/atoms";
 
-import BackEnd from "./pageContents/Back-End";
-import FrontEnd from "./pageContents/Front-End";
-import Education from "./pageContents/Education";
-import About from "./pageContents/About";
+import Hidrolik from "./pageContents/Hidrolik/Hidrolik";
+import Ruzgar from "./pageContents/Ruzgar/Ruzgar";
+import Nukleer from "./pageContents/Nukleer/Nukleer";
+import About from "./pageContents/About/About";
+import Fosil from "./pageContents/Fosil/Fosil";
 
 
 
@@ -24,7 +25,7 @@ export default () => {
             setRootProperty('--page-line', 'white')
             setRootProperty('--default-block-background-color', '#22272E')
             setRootProperty('--nav-button-color', 'black')
-            setRootProperty('--custom-blue-line", "#00eeff')
+            setRootProperty('--custom-blue-line', '#00eeff')
             return;
         }
         setRootProperty('--page-line', 'rgb(10, 5, 0)')
@@ -51,9 +52,10 @@ export default () => {
             <Nav/>
             <PageContainer>
                 <About />
-                <FrontEnd />
-                <BackEnd />
-                <Education />
+                <Ruzgar />
+                <Hidrolik />
+                <Nukleer />
+                <Fosil />
             </PageContainer>
             <ContactForm/>
         </>

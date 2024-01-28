@@ -26,7 +26,7 @@
 	padding: 0;
 }
 
-@media screen and (max-width: 690px) {
+@media screen and (max-width: 770px) {
 	#hambutton {
 		display: flex;
 		justify-content: space-between;
@@ -101,7 +101,7 @@
 	}
 }
 
-@media screen and (min-width: 690px) {
+@media screen and (min-width: 770px) {
 	#main-nav {
 		display: block !important;
 	}
