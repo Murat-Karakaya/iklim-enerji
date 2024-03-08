@@ -5,11 +5,6 @@
 }
 
 /*Page Basic Styles*/
-
-.text-align-left {
-	text-align: left;
-}
-
 .contents {
 	width: clamp(100px, 100%, 800px);
 	display: flex;
@@ -59,14 +54,22 @@
 	animation: move-bg-to-left 6s linear infinite;
 }
 
-.cutoff-article {
-	max-height: 7em;
+.article-p {
+	text-align: left;
+	text-overflow: ellipsis
+}
+
+.article-child {
 	overflow: hidden;
-	position: relative;
-	transition: color .2s, background-color .2s, height .2s;
+}
+
+.cutoff-article {
+	display: grid;
+	grid-template-rows: 0fr;
+	transition: grid-template-rows .5s linear, color .2s, background-color .2s;
 }
 .cutoff-article:has(+ div > .expand-btn:checked) {
-	max-height: none;
+	grid-template-rows: 1fr;
 }
 
 .expand-btn {
@@ -78,44 +81,45 @@
 	background-color: var(--page-line);
 	color: var(--default-block-background-color);
 }
+.expand-btn::before {
+	content: "Genişlet";
+}
+.expand-btn:checked::before {
+	content: "Daralt";
+}
 
 .expand-btn-container {
 	margin-top: 1em;
 	position: relative;
 	width: fit-content;
 }
-.expand-btn-container::before {
+.expand-btn-container::before, .expand-btn-container::after {
 	position: absolute;
 	content: "";
+	transition: all .2s;
+	background-color: var(--custom-blue-line);
+	height: 3px;
+	width: 0;
+}
+.expand-btn-container::before {
 	top: 0;
 	right: 0;
-	width: 0;
-	height: 3px;
-	background-color: var(--custom-blue-line);
-	transition: all .2s;
 }
 .expand-btn-container::after {
-	position: absolute;
-	content: "";
 	bottom: 0;
 	left: 0;
-	width: 0;
-	height: 3px;
-	background-color: var(--custom-blue-line);
-	transition: all .2s;
 }
-.expand-btn-container:hover::before {
-	width: 100%;
-}
-.expand-btn-container:hover::after {
+.expand-btn-container:hover::before, .expand-btn-container:hover::after {
 	width: 100%;
 }
 
-.expand-btn::before {
-	content: "Genişlet";
-}
-.expand-btn:checked::before {
-	content: "Daralt";
+.source-links {
+	display: block;
+	width: fit-content;
+	max-width: calc(100vw - 10em);
+	white-space: nowrap; /* Prevent text wrapping */
+	overflow: hidden;  /* Hide excess text */
+	text-overflow: ellipsis;
 }
 
 @media screen and (max-width: 700px) {

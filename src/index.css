@@ -15,15 +15,17 @@ body,html{
 	outline: 3px solid var(--page-line);
 }
 
-*{
-	color: var(--page-line);
-	font-family: 'Montserrat', sans-serif;
-	box-sizing: border-box;
-	font-size: 18px;
-	transition: color .2s, background-color .2s;
-}
-*:not(h1, h2, h3, p, a, img, label) {
-	background-color: var(--default-block-background-color);
+@layer default-of-all-elements {
+	*{
+		color: var(--page-line);
+		font-family: 'Montserrat', sans-serif;
+		box-sizing: border-box;
+		font-size: 18px;
+		transition: color .2s, background-color .2s;
+	}
+	*:not(h1, h2, h3, p, a, img, label) {
+		background-color: var(--default-block-background-color);
+	}	
 }
 
 fieldset, legend {
@@ -72,7 +74,8 @@ p {
 
 section {
 	display: grid;
-	height: clamp(430px, 100%, 700px);
+	margin-top: 15em;
+	margin-bottom: 15em;
 	align-content: center;
 	row-gap: 2rem;
 	place-items: center;
@@ -92,6 +95,8 @@ iframe {
 	margin: 1em;
 	border: 2px solid var(--custom-blue-line);
 	border-radius: 5px;
+	width: clamp(300px, 50%, 700px);
+	aspect-ratio: 16/9;
 }
 
 a{

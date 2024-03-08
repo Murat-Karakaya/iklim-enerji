@@ -1,6 +1,5 @@
 import Nav from "./components/nav/nav";
 import PageContainer from "./components/pageContainer/pageContainer";
-import ContactForm from "./components/modal/modal"
 import { useEffect } from "react";
 import { useAtomValue } from "jotai";
 import { darkModeAtom } from "./jotai/atoms";
@@ -57,7 +56,6 @@ export default () => {
                 <Nukleer />
                 <Fosil />
             </PageContainer>
-            <ContactForm/>
         </>
     )
 }
