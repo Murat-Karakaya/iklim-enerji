@@ -4,12 +4,10 @@ export default ()=>{
 
     const introSection = useRef(null)
     const sourcesSection = useRef(null)
-    const githubSection = useRef(null)
     const coalSection = useRef(null)
 
     const startIntroSection = () => introSection.current.scrollIntoView({behavior: "smooth"})
     const startSourcesSection = ()=> sourcesSection.current.scrollIntoView({behavior:"smooth"})
-    const startGithub = ()=> githubSection.current.scrollIntoView({behavior:"smooth"})
     const startCoalEnergy = ()=> coalSection.current.scrollIntoView({behavior:"smooth"})
     
     return(<>
@@ -20,31 +18,31 @@ export default ()=>{
                 <legend>İçindekiler</legend>
                 <button onClick={startIntroSection} className="startButton">Giriş</button>
                 <button onClick={startCoalEnergy} className="startButton">Kömür-Enerji</button>
-                <button onClick={startGithub} className="startButton">Github</button>
+                <button onClick={startSourcesSection} className="startButton">Kaynakça</button>
             </fieldset>
         </section>
         
         <section ref={introSection}>
             <h2>Giriş</h2>
-            <p className="article-p">Günümüzde fosil yakıtlar dünyanın sürekli artan enerji ihtiyacının karşılanmasında çok önemli bir rol oynamaktadır. Bu sayfada fosil yakıtlar ile enerji arasındaki ilişkiyi araştırmaya çalıştım. Fosil yakıtların pek çok örneği vardır <sup onClick={startSourcesSection}>1</sup>. Ancak enerji bakımından bütün fosil yakıtlar benzer verime sahip için bu sayfada en sık kullanılan fosil yakıt olan kömürü ele almaya karar verdim <sup onClick={startSourcesSection}>2</sup>. Ancak bilinmeli ki her ne kadar fosil yakıtlar enerji verimi bakımından birbirleriyle benzer olsalar da kömür için geçerli olan veriler diğer fosil yakıtları yansıtmayabilir.</p>
+            <p className="article-p">Günümüzde fosil yakıtlar dünyanın sürekli artan enerji ihtiyacının karşılanmasında çok önemli bir rol oynamaktadır. Bu sayfada fosil yakıtlar ile enerji arasındaki ilişkiyi araştırmaya çalıştım. Fosil yakıtların pek çok örneği vardır<sup onClick={startSourcesSection}>1</sup>. Ancak enerji bakımından bütün fosil yakıtlar benzer verime sahip için bu sayfada en sık kullanılan fosil yakıt olan kömürü ele almaya karar verdim<sup onClick={startSourcesSection}>2</sup>. Ancak bilinmeli ki her ne kadar fosil yakıtlar enerji verimi bakımından birbirleriyle benzer olsalar da kömür için geçerli olan veriler diğer fosil yakıtları yansıtmayabilir.</p>
         </section>
         
         <section>
             <div className="place-center">
             <h2 ref={coalSection}>Kömür-Enerji İlişkisi</h2>
-            <p className="article-p">Kilogram başına elde edilebilecek enerji miktarı 30MJ'dur <sup onClick={startSourcesSection}>3</sup> ve kömürden elde edilen her MWh elektriğin başına 109 dolar . Ancak bu sayı farklı kömür türlerine, enerji elde etme yöntemlerine vs. bağlı olarak büyük bir değişkenlik gösterebilir.</p>
+            <p className="article-p"> Kilogram başına elde edilebilecek enerji miktarı 30MJ'dur<sup onClick={startSourcesSection}>3</sup> ve kömürden elde edilen her MWh elektriğin başına 109 dolar kâr elde edilir. Ancak bu sayı farklı kömür türlerine, enerji elde etme yöntemlerine vs. bağlı olarak büyük bir değişkenlik gösterebilir.</p>
             <article className="cutoff-article">
                 <div className="article-child">
-                    <p className="article-p">Aşağıda kömürden enerji elde etmenin kolaylıklarına ve zorluklarına farklı bakış açılarından bakarak size sunmaya çalıştım. </p>
+                    <p className="article-p"> Aşağıda kömürden enerji elde etmenin kolaylıklarına ve zorluklarına farklı bakış açılarından bakarak size sunmaya çalıştım. </p>
 
                     <h3>1. Depolama</h3>
-                    <p className="article-p">Kömür depolama bakımından oldukça kolaydır. Bunun sebebi pek çok enerji kaynağından ve hatta diğer fosil yakıtlardan farklı olarak sadece kasalara konabilir <sup onClick={startSourcesSection}>4</sup>. Örneğin doğal gaz tüplerde saklanması gerekir; yenilenebilir enerji kaynakları ise doğrudan saklanamaz, onlardan enerji elde etmek için bataryalara ihtiyaç vardır. Bataryalarla enerji depo etmek oldukça çetrefilli bir iştir. Aşağıda bu sorun hakkında bir video vardır.</p>
+                    <p className="article-p"> Kömür depolama bakımından oldukça kolaydır. Bunun sebebi pek çok enerji kaynağından ve hatta diğer fosil yakıtlardan farklı olarak sadece kasalara konabilir<sup onClick={startSourcesSection}>4</sup>. Örneğin doğal gaz tüplerde saklanması gerekir; yenilenebilir enerji kaynakları ise doğrudan saklanamaz, onlardan enerji elde etmek için bataryalara ihtiyaç vardır. Bataryalarla enerji depo etmek oldukça çetrefilli bir iştir. Aşağıda bu sorun hakkında bir video vardır.</p>
 
                     <iframe loading="lazy" src="https://www.youtube.com/embed/r4OWMSG4Agg?si=_B4ZTniHlg82OD8D" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
                     <br />
                     <h3>2. Bulunabilirlik</h3>
-                    <p className="article-p">Kömür pek çok yerde bulunabilecek bir madendir. Örneğin nükleer enerji üretimi yapabilmek için uranyum (U-235), bor karbür gibi madenlere ihtiyaç vardır <sup onClick={startSourcesSection}>5</sup> <sup onClick={startSourcesSection}>6</sup>. Ve bu madenlere kömür kadar sık karşılaşılmaz. Kömürden her zaman enerji elde edilebilir. Ancak yenilenebilir enerjilerde aynı durum geçerli olmayabilir. Örneğin güneş panelleri geceleri ve kışın verimsiz çalışmaktadır. </p>
+                    <p className="article-p"> Kömür pek çok yerde bulunabilecek bir madendir. Örneğin nükleer enerji üretimi yapabilmek için uranyum (U-235), bor karbür gibi madenlere ihtiyaç vardır<sup onClick={startSourcesSection}>5</sup> <sup onClick={startSourcesSection}>6</sup>. Ve bu madenlere kömür kadar sık karşılaşılmaz. Kömürden her zaman enerji elde edilebilir. Ancak yenilenebilir enerjilerde aynı durum geçerli olmayabilir. Örneğin güneş panelleri geceleri ve kışın verimsiz çalışmaktadır. </p>
 
 
                     <h3>3. Fiyat</h3>
@@ -52,46 +50,10 @@ export default ()=>{
                 </div>
             </article>
             <div className="expand-btn-container">
-                <input className="expand-btn" type="checkbox" onClick={(e) => {console.log(e); startCoalEnergy();}} />
+                <input className="expand-btn" type="checkbox" onClick={startCoalEnergy} />
             </div>    
             </div>
             
-        </section>
-
-        <section ref={githubSection}>
-            <p>Bu internet sitesine katkıda bulunmak istiyorsanız bu sitenin kodları Github'da <a target="_blank" href="https://github.com/Murat-Karakaya/iklim-enerji">iklim-enerji</a> deposunda bulabilirsiniz. Eğer diğer projelerimi de merak ediyorsanız onları da <a href="https://github.com/Murat-Karakaya">Github'dan</a> bulabilirsiniz. 😉</p>
-            
-            <div
-             className="linkLineup"
-             style={{width:"100%", justifyContent:"center", columnGap:"10%"}}
-            >
-                <a
-                 className="logo-a" 
-                 target="_blank" 
-                 href="https://github.com/Murat-Karakaya/iklim-enerji"
-                >
-                    <img
-                     loading="lazy" 
-                     style={{"--order":"0"}} 
-                     className="reveal logo" 
-                     alt="Website Logo" 
-                     src="/favicon.svg"
-                    />
-                </a>
-                <a
-                 className="logo-a" 
-                 target="_blank" 
-                 href="https://github.com/Murat-Karakaya"
-                >
-                    <img
-                     loading="lazy" 
-                     style={{"--order":"1"}} 
-                     className="reveal logo" 
-                     alt="Developers Logo" 
-                     src="/murat-logo.png"
-                    />
-                </a>
-            </div>
         </section>
 
         <section ref={sourcesSection}>
