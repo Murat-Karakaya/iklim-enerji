@@ -7,7 +7,9 @@ const Page=({children, id})=>{
         <div aria-hidden={String(currentPage!=id)}
          id={"page"+id}
          className="page">
-            {children}
+            <div className="page-child custom-scrollbar">
+                {children}
+            </div>
         </div>
     )
 }

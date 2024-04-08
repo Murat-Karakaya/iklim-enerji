@@ -21,7 +21,7 @@
 .link, #nav-end, #ham-end{
 	user-select: none;
 	padding: 0 10px 0 10px;
-	height: calc(1em + 35px);
+	height: calc(1em + 35px); /*max-height is set according these navbutton height */
 	font-family: 'Nunito', sans-serif;
 	font-weight: 500;
 	color: var(--page-line);

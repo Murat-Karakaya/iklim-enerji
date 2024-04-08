@@ -25,7 +25,7 @@ const Nav=()=> {
 
     const hideNav = () => setSmallNavVis(false)
     
-    const buttonValues = [ "Anasayfa", "Rüzgar Enerjisi", "Hidrolik Enerji", "Nükleer Enerji" , "Fosil Yakıt" ]
+    const buttonValues = [ "Anasayfa", "Yenilenebilir Enerji", "Nükleer Enerji" , "Fosil Yakıt" ]
     return(
         <>
             <Hambutton clickHandler={hamClicked}/>

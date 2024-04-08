@@ -30,11 +30,31 @@
 
 .page {
     box-sizing: border-box;
-	overflow-y: auto;
 	width: 100vw;
+	overflow-y: visible;
 	flex-shrink: 0;
 	perspective: 20px;
 }
+.custom-scrollbar::-webkit-scrollbar-track {
+	border-radius: 10px;
+	background-color: #f5f5f56b;
+}
+.custom-scrollbar::-webkit-scrollbar {
+	width: 12px;
+	background-color: #f5f5f56b;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
+.page-child {
+	max-height: calc(100vh - 1em - 39px); /* max-height is set according to navbutton height */
+}
+.custom-scrollbar {
+	overflow-y: scroll;
+}
+
 
 .place-center {
 	display: grid;
@@ -66,7 +86,7 @@
 .cutoff-article {
 	display: grid;
 	grid-template-rows: 0fr;
-	transition: grid-template-rows .5s linear, color .2s, background-color .2s;
+	transition: grid-template-rows .7s ease-in, color .2s, background-color .2s;
 }
 .cutoff-article:has(+ div > .expand-btn:checked) {
 	grid-template-rows: 1fr;
