@@ -31,9 +31,7 @@
 .page {
     box-sizing: border-box;
 	width: 100vw;
-	overflow-y: visible;
 	flex-shrink: 0;
-	perspective: 20px;
 }
 .custom-scrollbar::-webkit-scrollbar-track {
 	border-radius: 10px;
@@ -50,6 +48,7 @@
 }
 .page-child {
 	max-height: calc(100vh - 1em - 39px); /* max-height is set according to navbutton height */
+	perspective: 20px;
 }
 .custom-scrollbar {
 	overflow-y: scroll;

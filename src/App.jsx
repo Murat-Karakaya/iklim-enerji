@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { useAtomValue } from "jotai";
 import { darkModeAtom } from "./jotai/atoms";
 
-import Hidrolik from "./pageContents/Hidrolik/Hidrolik";
+import Renewables from "./pageContents/Renewables/Renewables";
 import Nukleer from "./pageContents/Nukleer/Nukleer";
 import About from "./pageContents/About/About";
 import Fosil from "./pageContents/Fosil/Fosil";
@@ -50,7 +50,7 @@ export default () => {
             <Nav/>
             <PageContainer>
                 <About />
-                <Hidrolik />
+                <Renewables />
                 <Nukleer />
                 <Fosil />
             </PageContainer>
