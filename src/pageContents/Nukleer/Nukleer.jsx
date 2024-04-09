@@ -34,16 +34,16 @@ export default ()=>{
             <article className="cutoff-article">
                 <div className="article-child">
                     <h3>1. Nükleer Enerjiyle Ne Kadar Kâr Edilir?</h3>
-                    <p className="article-p">Her ne kadar MWh başına elde edilen kâr fosil yakıtlardan düşük olsa da aslında bunun birtakım facia ve sorunlar sonucu nükleer enerji üzerine yapılan araştırmaların büyük anlamda yavaşlamasından kaynaklandığı düşünülmektedir. Ve yeni teknolojik gelişmeler sayesinde nükleer enerjinin daha güvenli ve daha verimli bir hâl alabileceği düşünülmektedir<sup onClick={startSourcesSection}>6</sup>.</p>
+                    <p className="article-p"> Nükleer enerjide MWh başına elde edilen kâr fosil yakıtlardan düşüktür. Ancak aslında bunun birtakım facia ve sorunlar sonucu nükleer enerji üzerine yapılan araştırmaların büyük anlamda yavaşlamasının büyük bir etkisi vardır. Ve yeni teknolojik gelişmeler sayesinde nükleer enerjinin daha güvenli ve daha verimli bir hâl alabileceği düşünülmektedir<sup onClick={startSourcesSection}>6</sup>. Bununla birlikte Türkiye "Fen Lisesi 9. Sınıf Fizik" kitabına göre nükleer santrallerden enerji elde etmenin de kendine göre uzun vadede kolaylıkları vardır.</p>
 
                     <h3>2. Nükleer Enerji Diğer Sorunlar</h3>
-                    <p className="article-p"> Nükleer enerjinin en büyük sorunlarından bir tanesi nükleer atıklarla nelerin yapılabileceğinin aslında çok da bilinmemesidir. Başka bir sorun ise elde edilen atıkla nükleer silah üretilme riski olmaktadır. Aşağıda da bu gibi sorunlar hakkında bir video verilmiştir</p>
+                    <p className="article-p"> Nükleer enerjinin en büyük sorunlarından bir tanesi nükleer atıklarla nelerin yapılabileceğinin aslında çok da bilinmemesidir. Başka bir sorun ise elde edilen atıkla nükleer silah üretilme riski olmasıdır. Aşağıda da bu gibi sorunlar hakkında bir video verilmiştir</p>
 
                     <iframe loading="lazy" src="https://www.youtube.com/embed/HEYbgyL5n1g?si=4KtLDlYfPUEfCIYj" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
                     <br />
                     <h3>2. Nükleer Enerji Faydaları</h3>
-                    <p className="article-p"> Her ne kadar bazı sorunları olsa da aslında nükleer santraller aslında çevre için uygun sayılabilecek birer enerji kaynaklarıdır<sup onClick={startSourcesSection}>1</sup> <sup onClick={startSourcesSection}>2</sup> <sup onClick={startSourcesSection}>3</sup>. Hatta şaşılacak bir şekilde elde edilen MWh enerji başına salınan karbondioksit miktarının en az olduğu enerji kaynaklarından biridir<sup onClick={startSourcesSection}>5</sup>. Bu durum aşağıdaki videolarda ifade edilmiştir.</p>
+                    <p className="article-p"> Bazı sorunları olsa da aslında nükleer santraller çevre için uygun sayılabilecek enerji kaynaklarıdır<sup onClick={startSourcesSection}>1</sup> <sup onClick={startSourcesSection}>2</sup> <sup onClick={startSourcesSection}>3</sup>. Hatta şaşılacak bir şekilde elde edilen MWh enerji başına salınan karbondioksit miktarının en az olduğu enerji kaynaklarından biridir<sup onClick={startSourcesSection}>5</sup>. Bu durum aşağıdaki videolarda ifade edilmiştir.</p>
                     <iframe loading="lazy" src="https://www.youtube.com/embed/pVbLlnmxIbY?si=p_ZIsX3JE1bFtDZ3" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                     <iframe loading="lazy" src="https://www.youtube.com/embed/EhAemz1v7dQ?si=800OtfyvmsQFfO8f" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                 </div>
