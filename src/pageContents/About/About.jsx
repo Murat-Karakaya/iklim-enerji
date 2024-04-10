@@ -24,6 +24,7 @@ export default ()=>{
                  key={i}
                  className="parallaxPhotos"
                  src={el[3]}
+                 alt={el[4]}
                 />
             )}
 
@@ -50,7 +51,7 @@ export default ()=>{
                      style={{"--order":"0"}} 
                      className="reveal logo" 
                      alt="Website Logo" 
-                     src="/favicon.svg"
+                     src="/favicon.png"
                     />
                 </a>
                 <a
@@ -62,7 +63,7 @@ export default ()=>{
                      loading="lazy" 
                      style={{"--order":"1"}} 
                      className="reveal logo" 
-                     alt="Developers Logo" 
+                     alt="Developer Logo" 
                      src="/murat-logo.png"
                     />
                 </a>

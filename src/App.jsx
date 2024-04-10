@@ -20,14 +20,14 @@ export default () => {
         const setRootProperty = (property, value) => rootElement.style.setProperty(property, value);
         
         if (isDarkMode) {
-            setRootProperty('--page-line', 'white')
+            setRootProperty('--page-line', '#e8e8e8')
             setRootProperty('--default-block-background-color', '#22272E')
             setRootProperty('--nav-button-color', 'black')
-            setRootProperty('--custom-blue-line', '#00eeff')
+            setRootProperty('--custom-blue-line', '#00cfde')
             return;
         }
         setRootProperty('--page-line', 'rgb(10, 5, 0)')
-        setRootProperty('--default-block-background-color', 'white')
+        setRootProperty('--default-block-background-color', '#e8e8e8')
         setRootProperty('--nav-button-color', 'white')
         setRootProperty('--custom-blue-line', '#195aff')
         return;

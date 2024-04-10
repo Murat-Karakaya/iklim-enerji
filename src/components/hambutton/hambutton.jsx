@@ -9,11 +9,15 @@ const Hambutton =({clickHandler})=>{
                 <span id="line"></span>
             </button>
 
-            <button id="ham-end"  onClick={() => setIsDarkMode(!isDarkMode)}>
+            <button
+             id="ham-end"
+             onClick={() => setIsDarkMode(!isDarkMode)}
+             aria-label={isDarkMode ? "use dark mode" : "use light mode"}
+            >
                 <img
                  height={40} 
-                 width={"auto"} 
-                 loading="lazy"
+                 width={"auto"}
+                 alt={isDarkMode ? "sun image" : "moon image"}
                  src={isDarkMode ? "light-dark-mode/sun.svg" : "light-dark-mode/moon.svg"}
                 />
             </button>

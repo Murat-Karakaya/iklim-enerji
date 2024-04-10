@@ -9,7 +9,7 @@ body,html{
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
-	--nav-backround: rgb(0, 0, 255);
+	--nav-backround: #3170f7;
 }
 :focus-visible{
 	outline: 3px solid var(--page-line);
