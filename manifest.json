@@ -5,18 +5,18 @@
     "theme_color": "#3170f7",
     "icons": [
         {
-            "src": "/favicon-smaller.png",
+            "src": "https://murat-karakaya.github.io/iklim-enerji/favicon-smaller.png",
             "type": "image/png",
             "sizes": "192x192"
         },
         {
-            "src": "/favicon.png",
+            "src": "https://murat-karakaya.github.io/iklim-enerji/favicon.png",
             "type": "image/png",
             "purpose": "any",
             "sizes": "512x512" 
         },
         {
-            "src": "/favicon.png",
+            "src": "https://murat-karakaya.github.io/iklim-enerji/favicon.png",
             "type": "image/png",
             "purpose": "maskable",
             "sizes": "512x512" 
