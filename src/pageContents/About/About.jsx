@@ -13,10 +13,10 @@ export default ()=>{
         <section>
             <h1 className="repeating-moving-bg gradient-text">Hoş Geldiniz!</h1>
 
-            <p>Bu internet sayfasında ben size iklimsel değişikliğin enerji ile ilişkisinden bahsetmeyi amaçladım. Birbirleriyle iç içe girmiş bir makarna oluşturmaktan kaçınmak için ise her enerji kaynağı için ayrı bir sayfa oluşturmaya karar verdim. Navigasyon çubuğundan hangi sayfaya gitmek istediğinize karar verebilirsiniz.</p>
+            <p>Bu internet sayfasında ben size iklimsel değişikliğin enerji ile ilişkisinden bahsetmeyi amaçladım. Bunu yapmak için ise farklı enerji kaynaklarıyla iklimsel değişiklik arasındaki ilişkiden bahsetmeye karar verdim. İnternet sayfasının kullanımını kolaylaştırmak için ise her enerji kaynağı için ayrı bir sayfa oluşturmaya karar verdim. Navigasyon çubuğundan hangi sayfaya gitmek istediğinize karar verebilirsiniz.</p>
         </section>
         
-        <section id="parallax-section">
+        <section id="parallax-section" onClick={switchPFocus}>
             {parallaxLayers.map((el,i)=>
                 <img
                  style={{right:el[0]+"%", bottom:el[1]+"%", transform:`translateZ(${ el[2]+focusAddon }px)`}}
@@ -31,6 +31,7 @@ export default ()=>{
             
             <div id="paralax-text-container">
                 <p onClick={switchPFocus}>Bu internet sitesini üretirken oluşturduğum <a target="_blank" href="https://murat-karakaya.github.io/iklimsel-yenilik/">İklimsel Farkındalık</a> projesinden yararlandım. İklimsel değişiklik büyük ve karmaşık bir problemdir. Ve ben bu sayfada tüm enerji kaynaklarına değinemedim -jeotermal gibi-. O yüzden eğer iklimsel değişiklik hakkında derin ve köklü bir kaynak araştırması yapmak istiyorsanız siz de <a target="_blank" href="https://murat-karakaya.github.io/iklimsel-yenilik/">İklimsel Farkındalık</a> projemden yararlanabilirsiniz 😇.</p>
+                <p>( Eğer yazıya odaklanmak istiyorsanız bu bölümün üzerine tıklayınız, eğer geri almak isterseniz bir kez daha tıklayınız )</p>
             </div>
         </section>
 

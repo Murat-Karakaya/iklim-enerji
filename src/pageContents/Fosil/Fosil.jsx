@@ -46,7 +46,7 @@ export default ()=>{
 
 
                     <h3>3. Fiyat</h3>
-                    <p className="article-p"> 2010 ve öncesinde Kömürden enerji elde etmek diğer enerji kaynaklarına kıyasla oldukça ucuzdu . Ancak son zamanlarda yenilenebilir enerji kaynakları çok hızlı bir şekilde ucuzladığı için artık yenilenebilir enerji kaynaklarına kıyasla daha pahalıdır <sup onClick={startSourcesSection}>4</sup>. O yüzden Dünya genelinde kömür tüketimi sabit kalmaya ve hatta bazı ülkelerde azalmaya başlamıştır <sup onClick={startSourcesSection}>8</sup> <sup onClick={startSourcesSection}>9</sup>. Ancak kömürden yenilenebilir enerjiye geçmek için zaten var olan kömür ocaklarından değil, yeni türbinler ve güneş panelleri üreterek ordan enerji elde etmeyi gerektirmektedir. </p>
+                    <p className="article-p"> 2010 ve öncesinde Kömürden enerji elde etmek diğer enerji kaynaklarına kıyasla oldukça ucuzdu . Ancak son zamanlarda yenilenebilir enerji kaynakları çok hızlı bir şekilde ucuzladığı için artık yenilenebilir enerji kaynaklarına kıyasla daha pahalıdır <sup onClick={startSourcesSection}>4</sup>. O yüzden Dünya genelinde kömür tüketimi sabit kalmaya ve hatta bazı ülkelerde azalmaya başlamıştır <sup onClick={startSourcesSection}>8</sup> <sup onClick={startSourcesSection}>9</sup>. Bunlarla birlikte Türkiye Fen Lisesi 9. Sınıf Fizik ders kitabına göre fosil yakıtların rezervleri sınırlı olduğu için enerji verimliliği açısından uygun olmayan kaynaklardır. Ancak kömürden yenilenebilir enerjiye geçmek için zaten var olan kömür ocaklarından değil, yeni türbinler ve güneş panelleri üreterek oradan enerji elde etmeyi gerektirmektedir. </p>
                 </div>
             </article>
             <div className="expand-btn-container">
