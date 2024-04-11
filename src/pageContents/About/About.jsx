@@ -51,7 +51,7 @@ export default ()=>{
                      style={{"--order":"0"}} 
                      className="reveal logo" 
                      alt="Website Logo" 
-                     src="/favicon.png"
+                     src="/iklim-enerji/favicon.png"
                     />
                 </a>
                 <a
@@ -64,7 +64,7 @@ export default ()=>{
                      style={{"--order":"1"}} 
                      className="reveal logo" 
                      alt="Developer Logo" 
-                     src="/murat-logo.png"
+                     src="/iklim-enerji/murat-logo.png"
                     />
                 </a>
             </div>
