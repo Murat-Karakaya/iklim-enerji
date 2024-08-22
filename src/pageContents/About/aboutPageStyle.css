@@ -49,6 +49,7 @@
 /*section 3*/
 
 #parallax-section {
+	cursor: pointer;
 	background-color: transparent;
 	position: relative;
 	transform-style: preserve-3d;
@@ -56,7 +57,6 @@
 }
 
 .parallaxPhotos {
-	cursor: pointer;
 	display: block;
 	position: absolute;
 	padding: .25em;
@@ -73,7 +73,6 @@
 #paralax-text-container {
 	border: 2px solid var(--custom-blue-line);
 	border-radius: .7em;
-	cursor: pointer;
 }
 
 @keyframes bounce {

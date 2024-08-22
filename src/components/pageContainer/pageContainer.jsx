@@ -7,13 +7,13 @@ import Page from "./page";
 
 const PageContainer=({children})=>{
     const [pageId]=useAtom(pageAtom)
-    useEffect(()=>{
+    useEffect(() => {
         /* aria-hidden = true elements should not have focusable descendents */
         /* aria-hidden = false elements can have focusable descendents */
 
         const setAriaHiddenDescendents = (parent, value) => {
             for (const element of parent) {
-                let focusables = element.querySelectorAll('button, input, select, textarea, a')
+                let focusables = element.querySelectorAll('button, input, select, textarea, a, [tabindex="0"]')
                 for (const el of focusables) el.setAttribute('tabindex', value)
             }
         }
@@ -33,7 +33,7 @@ const PageContainer=({children})=>{
         return(()=>{
             window.removeEventListener('resize',adjustPage)
         })
-    },[pageId])
+    }, [pageId])
 
     return(
         <div id="pageContainer">

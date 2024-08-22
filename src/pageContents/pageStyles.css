@@ -16,11 +16,11 @@
 	margin: .5em;
 	width: clamp(190px, 30vw, 250px);
 	text-align: center;
-	background-color: #0015ff;
-	border-bottom: .125em solid #000a7d;
+	background-color: #3243ff;
+	border-bottom: .125em solid #18207c;
 	border-radius: .5rem;
 	padding: .25em;
-	color: white;
+	color: #e8e8e8;
 	font-family: 'Montserrat', sans-serif;
 }
 .startButton:active{

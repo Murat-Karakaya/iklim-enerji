@@ -50,7 +50,13 @@ export default ()=>{
                 </div>
             </article>
             <div className="expand-btn-container">
-                <input className="expand-btn" type="checkbox" onClick={startCoalEnergy} />
+                <input
+                 className="expand-btn" 
+                 type="checkbox" 
+                 onClick={() => {
+                    startCoalEnergy()
+                 }} 
+                />
             </div>    
             </div>
             
