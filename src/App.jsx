@@ -2,19 +2,40 @@ import Nav from "./components/nav/nav";
 import PageContainer from "./components/pageContainer/pageContainer";
 import { useEffect } from "react";
 import { useAtomValue } from "jotai";
-import { browserTypeAtom, darkModeAtom } from "./jotai/atoms";
+import { darkModeAtom } from "./jotai/atoms";
 
 import Renewables from "./pageContents/Renewables/Renewables";
 import Nukleer from "./pageContents/Nukleer/Nukleer";
 import About from "./pageContents/About/About";
 import Fosil from "./pageContents/Fosil/Fosil";
+import { useState } from "react";
 
 
 
 
 export default () => {
     const isDarkMode = useAtomValue(darkModeAtom)
-    const browserType = useAtomValue(browserTypeAtom)
+    const [isBrave, setIsBrave] = useState(false)
+
+    useEffect(() => {
+        function isBraveBrowser() {
+            return new Promise((resolve) => {
+                // Check if the navigator object has the brave property
+                if (navigator.brave) {
+                    navigator.brave.isBrave().then((isBrave) => {
+                        resolve(isBrave);
+                    });
+                } else {
+                    resolve(false);
+                }
+            });
+        }
+          
+        isBraveBrowser().then((isBrave) => {
+            setIsBrave(isBrave)
+        });
+    })
+
 
     useEffect(() => {
         const rootElement = document.getElementById('root')
@@ -47,7 +68,7 @@ export default () => {
         hiddenElements.forEach(el => observer.observe(el))
     }, [])
 
-    if (browserType !== "chromium") {
+    if (!isBrave) {
     return(
         <>
             <Nav/>
@@ -61,6 +82,6 @@ export default () => {
     )    
     }
     return (
-        <div>Sorry! Chromium based browsers are not supported :(</div>
+        <div>Sorry! brave browser is not supported :(</div>
     )
 }
