@@ -2,7 +2,7 @@ import Nav from "./components/nav/nav";
 import PageContainer from "./components/pageContainer/pageContainer";
 import { useEffect } from "react";
 import { useAtomValue } from "jotai";
-import { darkModeAtom } from "./jotai/atoms";
+import { browserTypeAtom, darkModeAtom } from "./jotai/atoms";
 
 import Renewables from "./pageContents/Renewables/Renewables";
 import Nukleer from "./pageContents/Nukleer/Nukleer";
@@ -14,6 +14,7 @@ import Fosil from "./pageContents/Fosil/Fosil";
 
 export default () => {
     const isDarkMode = useAtomValue(darkModeAtom)
+    const browserType = useAtomValue(browserTypeAtom)
 
     useEffect(() => {
         const rootElement = document.getElementById('root')
@@ -45,6 +46,8 @@ export default () => {
         const hiddenElements = document.querySelectorAll(".reveal")
         hiddenElements.forEach(el => observer.observe(el))
     }, [])
+
+    if (browserType === "firefox") {
     return(
         <>
             <Nav/>
@@ -55,5 +58,9 @@ export default () => {
                 <Fosil />
             </PageContainer>
         </>
+    )    
+    }
+    return (
+        <div>Sorry! Chromium based browsers are not supported :(</div>
     )
 }
