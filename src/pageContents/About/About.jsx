@@ -1,10 +1,13 @@
 import { useState } from "react"
 import "./aboutPageStyle.css"
 import parallaxLayers from "./parallaxLayers"
+import { browserTypeAtom } from "../../jotai/atoms"
+import { useAtomValue } from "jotai"
 
 export default ()=>{
+    const browserType = useAtomValue(browserTypeAtom)
     const [focusAddon, setFocusAddon]=useState(0)
-    
+
     const switchPFocus = () => {
         if (focusAddon === 0) return setFocusAddon(-12)
         setFocusAddon(0)
@@ -71,6 +74,6 @@ export default ()=>{
             </div>
         </section>
 
-        <section></section>
+        <section style={{height: browserType === "firefox" ? "1em" : 0}}></section>
     </>)
 }

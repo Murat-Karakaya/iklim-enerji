@@ -13,7 +13,7 @@ const PageContainer=({children})=>{
 
         const setAriaHiddenDescendents = (parent, value) => {
             for (const element of parent) {
-                const focusables = element.querySelectorAll('button, input, select, textarea, a, [tabindex="0"]')
+                const focusables = element.querySelectorAll('*, [tabindex="0"]')
                 for (const el of focusables) el.setAttribute('tabindex', value)
             }
         }
@@ -30,7 +30,7 @@ const PageContainer=({children})=>{
         const adjustPage=()=>currentPage.scrollIntoView()
         globalThis.addEventListener('resize',adjustPage);
 
-        return(()=>{
+        return(() => {
             globalThis.removeEventListener('resize',adjustPage)
         })
     }, [pageId])
