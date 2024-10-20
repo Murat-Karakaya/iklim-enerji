@@ -1,6 +1,6 @@
 import { atom } from "jotai";
 
-const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+const darkModeQuery = globalThis.matchMedia('(prefers-color-scheme: dark)');
 
 const pageAtom = atom(0)
 const modalAtom = atom(false)

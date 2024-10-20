@@ -11,7 +11,7 @@ const Nav=()=> {
     const [ smallNavVis, setSmallNavVis ] = useState(false)
 
     useEffect(()=>{
-        if(window.innerWidth >= 770 || smallNavVis) return
+        if(globalThis.innerWidth >= 770 || smallNavVis) return
 
         setTimeout(() => {
             navElement.current.style.display = "none"
