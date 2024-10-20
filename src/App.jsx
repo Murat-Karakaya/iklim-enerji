@@ -47,7 +47,7 @@ export default () => {
         hiddenElements.forEach(el => observer.observe(el))
     }, [])
 
-    if (browserType === "firefox") {
+    if (browserType !== "chromium") {
     return(
         <>
             <Nav/>
