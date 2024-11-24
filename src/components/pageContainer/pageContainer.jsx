@@ -24,8 +24,9 @@ const PageContainer=({children})=>{
         setAriaHiddenDescendents(notAriaHiddenelements, "0")
 
         /* Other stuff */
-        const currentPage=document.getElementById("page"+pageId)
-        currentPage.scrollIntoView({behavior:"smooth"})
+    const currentPage = document.getElementById("page" + pageId);
+    console.log(currentPage.id);
+    currentPage.scrollIntoView({ behavior: "smooth" })
 
         const adjustPage=()=>currentPage.scrollIntoView()
         globalThis.addEventListener('resize',adjustPage);
