@@ -23,9 +23,10 @@ body,html{
 		font-size: 18px;
 		transition: color .2s, background-color .2s;
 	}
-	*:not(h1, h2, h3, p, a, img, label) {
+
+	.page-child, #root, section, article, aside, header, footer, nav, main, form {
 		background-color: var(--default-block-background-color);
-	}	
+	}
 }
 
 fieldset, legend {

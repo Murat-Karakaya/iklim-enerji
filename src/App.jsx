@@ -8,33 +8,12 @@ import Renewables from "./pageContents/Renewables/Renewables";
 import Nukleer from "./pageContents/Nukleer/Nukleer";
 import About from "./pageContents/About/About";
 import Fosil from "./pageContents/Fosil/Fosil";
-import { useState } from "react";
 
 
 
 
 export default () => {
     const isDarkMode = useAtomValue(darkModeAtom)
-    const [isBrave, setIsBrave] = useState(false)
-
-    useEffect(() => {
-        function isBraveBrowser() {
-            return new Promise((resolve) => {
-                // Check if the navigator object has the brave property
-                if (navigator.brave) {
-                    navigator.brave.isBrave().then((isBrave) => {
-                        resolve(isBrave);
-                    });
-                } else {
-                    resolve(false);
-                }
-            });
-        }
-          
-        isBraveBrowser().then((isBrave) => {
-            setIsBrave(isBrave)
-        });
-    })
 
 
     useEffect(() => {
@@ -68,7 +47,6 @@ export default () => {
         hiddenElements.forEach(el => observer.observe(el))
     }, [])
 
-    if (!isBrave) {
     return(
         <>
             <Nav/>
@@ -80,8 +58,4 @@ export default () => {
             </PageContainer>
         </>
     )    
-    }
-    return (
-        <div>Sorry! brave browser is not supported :(</div>
-    )
 }
