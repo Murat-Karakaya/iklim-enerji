@@ -24,13 +24,13 @@ export default () => {
             setRootProperty('--page-line', '#e8e8e8')
             setRootProperty('--default-block-background-color', '#22272E')
             setRootProperty('--nav-button-color', 'black')
-            setRootProperty('--custom-blue-line', '#00cfde')
+            setRootProperty('--custom-blue-line', '#00efff')
             return;
         }
         setRootProperty('--page-line', 'rgb(10, 5, 0)')
         setRootProperty('--default-block-background-color', '#e8e8e8')
         setRootProperty('--nav-button-color', 'white')
-        setRootProperty('--custom-blue-line', '#195aff')
+        setRootProperty('--custom-blue-line', '#002fa6')
         return;
     }, [isDarkMode])
 

@@ -8,10 +8,6 @@ export default ()=>{
     const browserType = useAtomValue(browserTypeAtom)
     const [focusAddon, setFocusAddon]=useState(0)
 
-    const switchPFocus = () => {
-        if (focusAddon === 0) return setFocusAddon(-12)
-        setFocusAddon(0)
-    }
     return(<>
         <section>
             <h1 className="repeating-moving-bg gradient-text">Hoş Geldiniz!</h1>
@@ -19,7 +15,12 @@ export default ()=>{
             <p>Bu internet sayfasında ben size iklimsel değişikliğin enerji ile ilişkisinden bahsetmeyi amaçladım. Bunu yapmak için ise farklı enerji kaynaklarıyla iklimsel değişiklik arasındaki ilişkiden bahsetmeye karar verdim. İnternet sayfasının kullanımını kolaylaştırmak için ise her enerji kaynağı için ayrı bir sayfa oluşturmaya karar verdim. Navigasyon çubuğundan hangi sayfaya gitmek istediğinize karar verebilirsiniz.</p>
         </section>
         
-        <section id="parallax-section" tabIndex={0} onClick={switchPFocus}>
+        <section
+         id="parallax-section" 
+         tabIndex={0} 
+         onFocus={()=> setFocusAddon(-12)} 
+         onBlur={()=> setFocusAddon(0)}
+        >
             {parallaxLayers.map((el,i)=>
                 <img
                  style={{right:el[0]+"%", bottom:el[1]+"%", transform:`translateZ(${ el[2]+focusAddon }px)`}}

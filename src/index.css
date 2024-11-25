@@ -120,24 +120,6 @@ a:hover:before{
 	transform: scaleX(.5);
 }
 
-/* .unstyled-a {
-	text-decoration: none;
-}
-.unstyled-a::before{
-	position: relative;
-	content: "";
-	background-color: transparent;
-	height: 0;
-}
-.unstyled-a:hover:before{
-	width: 0;
-	transform: none;
-} */
-
-figure{
-    margin: .5em;
-}
-
 .button-x{
 	border-radius: .5em;
 	display: flex;

@@ -14,7 +14,6 @@ function checkBrowser() {
 
 const browserTypeAtom = atom(checkBrowser)
 const pageAtom = atom(0)
-const modalAtom = atom(false)
 const darkModeAtom = atom(darkModeQuery.matches)
 
-export { pageAtom, modalAtom, darkModeAtom, browserTypeAtom };
+export { pageAtom, darkModeAtom, browserTypeAtom };
