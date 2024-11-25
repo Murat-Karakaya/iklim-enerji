@@ -35,7 +35,7 @@ export default ()=>{
             
             <div id="paralax-text-container">
                 <p>Bu internet sitesini üretirken oluşturduğum <a target="_blank" href="https://murat-karakaya.github.io/iklimsel-yenilik/">İklimsel Farkındalık</a> projesinden yararlandım. İklimsel değişiklik büyük ve karmaşık bir problemdir. Ve ben bu sayfada tüm enerji kaynaklarına değinemedim -jeotermal gibi-. O yüzden eğer iklimsel değişiklik hakkında derin ve köklü bir kaynak araştırması yapmak istiyorsanız siz de <a target="_blank" href="https://murat-karakaya.github.io/iklimsel-yenilik/">İklimsel Farkındalık</a> projemden yararlanabilirsiniz 😇.</p>
-                <p>( Eğer yazıya odaklanmak istiyorsanız bu bölümün üzerine tıklayınız, eğer geri almak isterseniz bir kez daha tıklayınız )</p>
+                <p>( Eğer yazıya odaklanmak istiyorsanız bu bölümün üzerine tıklayınız, eğer geri almak isterseniz başka bir yere tıklayınız. )</p>
             </div>
         </section>
 

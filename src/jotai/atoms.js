@@ -4,7 +4,6 @@ const darkModeQuery = globalThis.matchMedia('(prefers-color-scheme: dark)');
 
 function checkBrowser() {
     const userAgent = navigator.userAgent.toLowerCase();
-    console.log(userAgent.includes('webkit'))
   
     if (userAgent.includes('firefox')) return "firefox"
     if (userAgent.includes('chrome')) return "chromium"
