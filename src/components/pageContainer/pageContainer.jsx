@@ -25,7 +25,6 @@ const PageContainer=({children})=>{
 
         /* Other stuff */
     const currentPage = document.getElementById("page" + pageId);
-    console.log(currentPage.id);
     currentPage.scrollIntoView({ behavior: "smooth" })
 
         const adjustPage=()=>currentPage.scrollIntoView()

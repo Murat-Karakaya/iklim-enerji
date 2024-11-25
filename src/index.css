@@ -24,7 +24,7 @@ body,html{
 		transition: color .2s, background-color .2s;
 	}
 
-	.page-child, #root, section, article, aside, header, footer, nav, main, form {
+	.page-child, #root, #paralax-text-container, section, article, aside, header, footer, nav, main, form {
 		background-color: var(--default-block-background-color);
 	}
 }
